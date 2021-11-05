@@ -1,0 +1,19 @@
+﻿<Window x:Class="library.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:library"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu>
+            <MenuItem x:Name="Author" Header="Автор" Click="Author_OnClick"></MenuItem>
+            <MenuItem x:Name="Publish" Header="Издательства" Click="Publish_OnClick"></MenuItem>
+            <MenuItem x:Name="Book" Header="Книги" Click="Book_OnClick"></MenuItem>
+        </Menu>
+    </Grid>
+</Window>
+
+        
+

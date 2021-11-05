@@ -1,0 +1,58 @@
+﻿<Window x:Class="library.View.WindowNewBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:library.View"
+        mc:Ignorable="d"
+        Title="WindowNewBook" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Код:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Автор:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Издательство:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Название:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="ISBN код:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Год публикации:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Количество страниц:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Переплёт:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Описание:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="Наличие на складе:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+
+        <TextBox x:Name="TbId" Grid.Row="0" Grid.Column="1" Text="{Binding Id}" Height="20" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" IsEnabled="False"/>
+
+
+        <TextBox x:Name="TbTitle" Grid.Row="3" Grid.Column="1" Text="{Binding Title}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbCode" Grid.Row="4" Grid.Column="1" Text="{Binding Code}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbYearPublish" Grid.Row="5" Grid.Column="1" Text="{Binding YearPublish}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbCountPage" Grid.Row="6" Grid.Column="1" Text="{Binding CountPage}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbHardcover" Grid.Row="7" Grid.Column="1" Text="{Binding Hardcover}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbAbstract" Grid.Row="8" Grid.Column="1" Text="{Binding Abstract}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+        <TextBox x:Name="TbStatuc" Grid.Row="9" Grid.Column="1" Text="{Binding Statuc}" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"/>
+
+        <ComboBox x:Name="CbAuthor" Grid.Row="1" Grid.Column="1" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" DisplayMemberPath="LastName"/>
+        <ComboBox x:Name="CbPublish" Grid.Row="2" Grid.Column="1" Height="20" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" DisplayMemberPath="NamePublish"/>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="BtSave" Content="Сохранить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,10,10,5" Click="BtSave_Click"/>
+            <Button x:Name="BtCansel" Content="Отменить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5,10,10,5" IsCancel="True"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
